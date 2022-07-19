@@ -1,154 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda virtual</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div   >
-    <section class="menu">
-        <header class="encabezado">
-            <div>
-                <img class="logo" src="assets/Logo vector Irreverente.net.png" alt="Logo de Mente Irreverente">
-            </div>
-            <div id="barraDeBusquedaYLogin">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tienda virtual</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div   >
+        <section class="menu">
+            <header class="encabezado">
                 <div>
-                    <form class="barraDeBusqueda">
-                        <div class="bloqueDeBusqueda">
-                            <input id="cajaDeBusqueda" type="text" placeholder="buscar...">
-                            <button id="botonBarraDeBusqueda">🔎</button>
-                        </div>
-                        <div class="bloqueDeLogin">
-                            <input id="cajaDeUsuario" type="text" placeholder="Usuario">
-                            <input id="cajaDeContrasena" type="text" placeholder="Clave">
-                            <button id="botonLogin">Login</button>
-                        </div>
-                    </form>
+                    <img class="logo" src="assets/Logo vector Irreverente.net.png" alt="Logo de Mente Irreverente">
+                </div>
+                <div id="barraDeBusquedaYLogin">
+                    <div>
+                        <form class="barraDeBusqueda">
+                            <div class="bloqueDeBusqueda">
+                                <input id="cajaDeBusqueda" type="text" placeholder="buscar...">
+                                <button id="botonBarraDeBusqueda">🔎</button>
+                            </div>
+                            <div class="bloqueDeLogin">
+                                <input id="cajaDeUsuario" type="text" placeholder="Usuario">
+                                <input id="cajaDeContrasena" type="text" placeholder="Clave">
+                                <button id="botonLogin">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </header>
+            <div>
+                <img class="banner" src="assets/bannerHorizontal.png" alt="Banner invitando a seguir nuestras redes sociales">
+            </div>
+
+            <main>
+                <ul class="productos" data-datosJSONEbooks>
+                    <!-- Aquí se cargarán dinámicamente los productos tomados de ebooks.json -->
+                </ul>
+            </main>
+        </section>
+        <section class="preFooter">
+            <div class="bloqueLogoInferiorYNavVerticalInferior">
+                <div>
+                    <img id="logoEnElPreFooter" src="assets/Logo vector Irreverente.net.png" alt="Logo de Mente Irreverente">
+                </div>
+                <div>
+                    <nav>
+                        <ul class="menu__list">
+                            <li class="menu__list__item"><a href="#sobre-mi">Acerca</a></li>
+                            <li class="menu__list__item"><a href="#formacion">Tiendas</a></li>
+                            <li class="menu__list__item"><a href="#xp">Franquiciado</a></li>
+                            <li class="menu__list__item"><a href="#skills">Privacidad</a></li>
+                            <li class="menu__list__item"><a href="#hobbies">Fidelidad</a></li>
+                            <li class="menu__list__item"><a href="#xp">Anuncie</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-        </header>
-        <div>
-            <img class="banner" src="assets/bannerHorizontal.png" alt="Banner invitando a seguir nuestras redes sociales">
-        </div>
-
-        <main>
-            <ul class="productos">
-                <li class="productoListado">
-                    <img class="imagen_ebook" src="assets/ebooks/COMO AHORRAR TIEMPO USANDO WHATSAPP BUSINESS.png" alt="¿Cómo ahorra tiempo usando WhatsApp Business?">
-                    <p class="producto-descripcion">$ 3 USD</p>
-                    <input type="button" value="Ver producto" id="DescargarWhatsApp" class="botonDescargar">
-                </li>
-                <li class="productoListado">
-                    <img class="imagen_ebook" src="assets/ebooks/SACALE JUGO A TU CUENTA DE GMAIL.png" alt="¡Sácale el juego a tu cuenta de Gmail!">
-                    <p class="producto-descripcion">Gratis</p>
-                    <input type="button" value="Ver producto" id="DescargarGmail" class="botonDescargar">
-                </li>
-                <li class="productoListado">
-                    <img class="imagen_ebook" src="assets/ebooks/COMO AHORRAR TIEMPO CON TU CELULAR Usando IFTTT.png" alt="¿Cómo ahorrar tiempo con tu celular usando IFTTT?">
-                    <p class="producto-descripcion">$ 3 USD</p>
-                    <input type="button" value="Ver producto" id="DescargarIFTTT" class="botonDescargar">
-                </li>
-                <li class="productoListado">
-                    <img class="imagen_ebook" src="assets/ebooks/AHORRA TIEMPO DE VIDA Usando Telegram.png" alt="¡Ahorra tiempo de vida usando Telegram!">
-                    <p class="producto-descripcion">$ 3 USD</p>
-                    <input type="button" value="Ver producto" id="DescargarTelegram" class="botonDescargar">
-                </li>
-                <li class="productoListado">
-                    <img class="imagen_ebook" src="assets/ebooks/COMO AHORRAR TIEMPO EN Instagram Facebook y TikTok.png" alt="¿Cómo ahorrar tiempo en redes sociales?">
-                    <p class="producto-descripcion">Gratis</p>
-                    <input type="button" value="Ver producto" id="DescargarRss" class="botonDescargar">
-                </li>
-                <li class="productoListado">
-                    <img class="imagen_ebook" src="assets/ebooks/AHORRA TIEMPO Y DINERO Usando Apps y LifeHacks para Todos.png" alt="¡Ahorra tiempo y dinero usando app y lifehacks!">
-                    <p class="producto-descripcion">Gratis</p>
-                    <input type="button" value="Ver producto" id="DescargarLifehacks" class="botonDescargar">
-                </li>
-                <li class="productoListado">
-                    <img class="imagen_ebook" src="assets/ebooks/AHORRA TIEMPO Y DINERO automatizando tus procesos.png" alt="¡Ahorra tiempo de vida usando Telegram!">
-                    <p class="producto-descripcion">Gratis</p>
-                    <input type="button" value="Ver producto" id="DescargarAutomatizate" class="botonDescargar">
-                </li>
-                <li class="productoListado">
-                    <img class="imagen_ebook" src="assets/ebooks/AHORRA TIEMPO Y DINERO Usando Apps y LifeHacks para Emprendedores.png" alt="¿Cómo ahorrar tiempo en redes sociales?">
-                    <p class="producto-descripcion">Gratis</p>
-                    <input type="button" value="Ver producto" id="DescargarEmprendedor" class="botonDescargar">
-                </li>
-                <li class="productoListado">
-                    <img class="imagen_ebook" src="assets/ebooks/COMO LOGRAR QUE TU CORREO ELECTRONICO TRABAJE PARA TI.png" alt="¡Ahorra tiempo y dinero usando app y lifehacks!">
-                    <p class="producto-descripcion">Gratis</p>
-                    <input type="button" value="Ver producto" id="DescargarEmail" class="botonDescargar">
-                </li>
-                <li class="productoListado">
-                    <img class="imagen_ebook" src="assets/ebooks/SALIDAS CON NIÑOS EN LA CIUDAD Apps y LifeHacks de Ahorro.png" alt="¡Ahorra tiempo y dinero usando apps y lifehacks al salir con niños en la ciudad!">
-                    <p class="producto-descripcion">Gratis</p>
-                    <input type="button" value="Ver producto" id="DescargarNinos" class="botonDescargar">
-                </li>
-                <li class="productoListado">
-                    <img class="imagen_ebook" src="assets/ebooks/SALIR CON AMIGOS O EN PAREJA LifeHacks con Apps para Ahorrar Dinero y Tiempo.png" alt="¡Ahorra tiempo y dinero usando apps y lifehacks al salir con amigos o la pareja!">
-                    <p class="producto-descripcion">Gratis</p>
-                    <input type="button" value="Ver producto" id="DescargarSalidas" class="botonDescargar">
-                </li>
-                <li class="productoListado">
-                    <img class="imagen_ebook" src="assets/ebooks/TRUCOS MODERNOS para gastar menos dinero sin sacrificar confort.png" alt="¡Trucos modernos para gastar menos dinero sin sacrificar confort!">
-                    <p class="producto-descripcion">Gratis</p>
-                    <input type="button" value="Ver producto" id="DescargarTrucos" class="botonDescargar">
-                </li>
-            </ul>
-        </main>
-    </section>
-    <section class="preFooter">
-        <div class="bloqueLogoInferiorYNavVerticalInferior">
             <div>
-                <img id="logoEnElPreFooter" src="assets/Logo vector Irreverente.net.png" alt="Logo de Mente Irreverente">
-            </div>
-            <div>
-                <nav>
-                    <ul class="menu__list">
-                        <li class="menu__list__item"><a href="#sobre-mi">Acerca</a></li>
-                        <li class="menu__list__item"><a href="#formacion">Tiendas</a></li>
-                        <li class="menu__list__item"><a href="#xp">Franquiciado</a></li>
-                        <li class="menu__list__item"><a href="#skills">Privacidad</a></li>
-                        <li class="menu__list__item"><a href="#hobbies">Fidelidad</a></li>
-                        <li class="menu__list__item"><a href="#xp">Anuncie</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-        <div>
-            <div  class="formcontato__contacto">
-                <div class="formcontato__text">
-                    <form class="formcontato__form" name="form">
-                        <h3>Habla con nosotros</h3>
-                        <input class="formcontato__input" id="nombre" type="text" name="nombre" placeholder="Nombre">
-                        <textarea class="formcontato__textarea"  id="mensaje" name="mensaje" placeholder="Escribe tu mensaje"></textarea>
-                        <button type="submit" class="formcontato__botao" id="botonEnviarAhoraElFormulario">Enviar mensaje</button>
-                    </form>
-                    <!-- rows="10" cols="80" -->
+                <div  class="formcontato__contacto">
+                    <div class="formcontato__text">
+                        <form class="formcontato__form" name="form">
+                            <h3>Habla con nosotros</h3>
+                            <input class="formcontato__input" id="nombre" type="text" name="nombre" placeholder="Nombre">
+                            <textarea class="formcontato__textarea"  id="mensaje" name="mensaje" placeholder="Escribe tu mensaje"></textarea>
+                            <button type="submit" class="formcontato__botao" id="botonEnviarAhoraElFormulario">Enviar mensaje</button>
+                        </form>
+                        <!-- rows="10" cols="80" -->
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-        <!-- Sección de Footer -->
-        <section class="footer">
-            <div class="footer__rodape">
-                <p>Desarrollado por Angi Catalina Pardo Pineda para el segundo Challenge de Front-end de Alura Latam</p>
-                <p>2022</p>
             </div>
         </section>
-    </div>
- <!-- Script del documento JavaScript -->
-<script src="validacion.js"></script>
-<script src="ebooks.js"></script>
-</body>
+
+            <!-- Sección de Footer -->
+            <section class="footer">
+                <div class="footer__rodape">
+                    <p>Desarrollado por Angi Catalina Pardo Pineda para el segundo Challenge de Front-end de Alura Latam</p>
+                    <p>2022</p>
+                </div>
+            </section>
+        </div>
+    <!-- Script del documento JavaScript -->
+    <script src="validacion.js"></script>
+    <script src="ebooks.js"></script>
+    </body>
 </html>

@@ -132,6 +132,7 @@ body {
     background-color: var(--cor-de-fundo) ;
     font-family: 'Raleway';
     line-height: 1;
+    min-width: 320px;
     max-width: 2000px;
 }
 
@@ -275,7 +276,11 @@ img:hover {
     
     .footer{
        width: 100%;
-    }    
+    }
+
+    .claseParaFiltrado{
+        display: none;
+    }
 }
 
 /*Tablet*/
